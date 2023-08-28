@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserstate
+xcuserdata/
+
+# Swift Package Manager
+.build/
+
+# Swift build artifacts
+.swift-build/
+*.swiftpm/
+
+# Carthage
+/Carthage/Build/
+
+# CocoaPods
+Pods/
+*.xcworkspace/
+
+# App distribution
+*.ipa
+*.xcarchive
+
+# Swift Package Manager dependencies
+Packages/
+Package.pins
+.resolve/
+
+**/.DS_Store
