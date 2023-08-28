@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+  
   var body: some View {
     NavigationSplitView {
       List(1..<50) { num in
-        NavigationLink("Item \(num)", value: num)
+        NavigationLink(value: num) {
+          AssetCatalogCell(name: "Test App", createdDate: Date.now, modifiedDate: Date.now)
+        }
       }
       .navigationDestination(for: Int.self) {
         Text("\($0)")
       }
     } detail: {
-      Text("Detail")
+      VStack {
+        Image(systemName: "magazine.fill")
+          .padding(.bottom, 4)
+        Text("No Catalogs")
+          .bold()
+        Text("The asset catalogs you add will appear here")
+          .opacity(0.5)
+      }
     }
     .toolbar {
       ToolbarItemGroup(placement: .primaryAction) {
